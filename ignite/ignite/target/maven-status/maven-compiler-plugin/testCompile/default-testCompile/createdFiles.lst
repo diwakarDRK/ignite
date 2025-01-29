@@ -1,3 +1,8 @@
+com\ignite\ignite\tests\BookingApplicationTest.class
+com\ignite\ignite\service\BookingServiceTest.class
 com\ignite\ignite\controller\WorkoutClassControllerTest.class
 com\ignite\ignite\controller\BookingControllerTest.class
+com\ignite\ignite\tests\ClassApplicationTest.class
 com\ignite\ignite\IgniteApplicationTests.class
+com\ignite\ignite\service\ClassServiceTest.class
+com\ignite\ignite\utils\DataUtil.class

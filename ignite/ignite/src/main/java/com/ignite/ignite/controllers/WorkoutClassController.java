@@ -2,7 +2,7 @@ package com.ignite.ignite.controllers;
 
 import com.ignite.ignite.responseModel.WorkoutClass;
 import com.ignite.ignite.services.WorkoutClassService;
-import com.ignite.ignite.request.ClassCreateRequest;
+import com.ignite.ignite.request.WorkoutClassCreateRequest;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +19,7 @@ public class WorkoutClassController {
 
     @PostMapping
     public ResponseEntity<WorkoutClass> createClass(
-            @Valid @RequestBody ClassCreateRequest request) {
+            @Valid @RequestBody WorkoutClassCreateRequest request) {
         WorkoutClass createdClass = classService.createClass(request);
         return ResponseEntity.ok(createdClass);
     }

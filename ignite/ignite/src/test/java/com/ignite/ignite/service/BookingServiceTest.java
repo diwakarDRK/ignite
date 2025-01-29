@@ -6,7 +6,7 @@ import com.ignite.ignite.services.BookingService;
 import com.ignite.ignite.services.WorkoutClassService;
 import com.ignite.ignite.utils.DataUtil;
 import com.ignite.ignite.request.BookingCreateRequest;
-import com.ignite.ignite.request.ClassCreateRequest;
+import com.ignite.ignite.request.WorkoutClassCreateRequest;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,7 +30,7 @@ class BookingServiceTest {
     @BeforeAll
     void setUp() throws IOException {
         String request = DataUtil.getCorrectClassRequest();
-        ClassCreateRequest classCreateRequest = DataUtil.getObjectFromString(request, ClassCreateRequest.class);
+        WorkoutClassCreateRequest classCreateRequest = DataUtil.getObjectFromString(request, WorkoutClassCreateRequest.class);
         workoutClassService.createClass(classCreateRequest);
     }
 

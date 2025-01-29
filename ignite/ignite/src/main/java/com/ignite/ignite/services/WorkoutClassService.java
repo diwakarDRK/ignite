@@ -2,7 +2,7 @@ package com.ignite.ignite.services;
 
 import com.ignite.ignite.responseModel.WorkoutClass;
 import com.ignite.ignite.repo.WorkoutClassRepository;
-import com.ignite.ignite.request.ClassCreateRequest;
+import com.ignite.ignite.request.WorkoutClassCreateRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ public class WorkoutClassService {
     @Autowired
     private WorkoutClassRepository classRepository;
 
-    public WorkoutClass createClass(ClassCreateRequest request) {
+    public WorkoutClass createClass(WorkoutClassCreateRequest request) {
         // Additional business logic validation
         validateClassCreation(request);
 
@@ -28,7 +28,7 @@ public class WorkoutClassService {
         return classRepository.save(workoutClass);
     }
 
-    private void validateClassCreation(ClassCreateRequest request) {
+    private void validateClassCreation(WorkoutClassCreateRequest request) {
         //For given date range class already exist
         // ***************???
 

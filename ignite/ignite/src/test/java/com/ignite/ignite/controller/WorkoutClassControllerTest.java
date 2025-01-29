@@ -5,7 +5,7 @@ import com.ignite.ignite.controllers.WorkoutClassController;
 import com.ignite.ignite.responseModel.WorkoutClass;
 import com.ignite.ignite.services.WorkoutClassService;
 import com.ignite.ignite.utils.DataUtil;
-import com.ignite.ignite.request.ClassCreateRequest;
+import com.ignite.ignite.request.WorkoutClassCreateRequest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,12 +31,12 @@ class WorkoutClassControllerTest {
 
     @Test
     @DisplayName("When createClass() is called with correct parameters, then the class should be created")
-    void testCreateClass() throws Exception {
+    void testWorkoutCreateClass() throws Exception {
         // Arrange
         String request = DataUtil.getCorrectClassRequest();
         String response = DataUtil.getCorrectClassResponse();
         JsonNode responseModel = DataUtil.getObjectFromString(response, JsonNode.class);
-        ClassCreateRequest classRequest = DataUtil.getObjectFromString(request, ClassCreateRequest.class);
+        WorkoutClassCreateRequest classRequest = DataUtil.getObjectFromString(request, WorkoutClassCreateRequest.class);
 
         when(workoutClassService.createClass(classRequest)).thenReturn
                 (DataUtil.getObjectFromString(responseModel.get("data").toString(), WorkoutClass.class));
@@ -58,7 +58,7 @@ class WorkoutClassControllerTest {
         // Arrange
         String request = DataUtil.getCorrectClassRequest();
         String response = DataUtil.getBadRequestClassResponse();
-        ClassCreateRequest classRequest = DataUtil.getObjectFromString(request, ClassCreateRequest.class);
+        WorkoutClassCreateRequest classRequest = DataUtil.getObjectFromString(request, WorkoutClassCreateRequest.class);
 
         when(workoutClassService.createClass(classRequest)).thenThrow(
                 new IllegalArgumentException("A class with these details already exists"));
