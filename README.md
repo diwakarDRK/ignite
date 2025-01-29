@@ -1,6 +1,6 @@
 # ignite 
 
-A Spring Boot application for workout clubs/gyms. 
+A Spring Boot application for workout class creation and booking at clubs/gyms. 
 
 ## Architecture
 
@@ -121,7 +121,7 @@ curl --location 'localhost:8080/api/bookings' \
 ```
 3. Search booking with optional paramaters
    ```bash
-   curl --location 'localhost:8080/api/bookings/search?memberName=Nav%20Jhon&startDate=null&endDate=null'
+   curl --location 'localhost:8080/api/bookings/search?memberName=Diwakar&startDate=null&endDate=null'
    ```
 
 ## Error Handling
