@@ -29,10 +29,8 @@ public class WorkoutClassService {
     }
 
     private void validateClassCreation(WorkoutClassCreateRequest request) {
-        //For given date range class already exist
-        // ***************???
-
-
+        //For given date range class already exist(Business Logic can be added)
+    
         if (request.getEndDate().isBefore(request.getStartDate())) {
             throw new IllegalArgumentException("End date must be after start date");
         }
