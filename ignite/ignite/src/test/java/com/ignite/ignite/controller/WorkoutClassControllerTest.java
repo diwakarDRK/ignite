@@ -48,7 +48,6 @@ class WorkoutClassControllerTest {
                 .andExpect(status().isOk());
         // Assert
         verify(workoutClassService, times(1)).createClass(classRequest);
-        //We can add argument captors as well but this seems thorough enough
     }
 
 
@@ -70,6 +69,5 @@ class WorkoutClassControllerTest {
                 .andExpect(status().is4xxClientError());
         // Assert
         verify(workoutClassService, times(1)).createClass(classRequest);
-        //We can add argument captors as well but this seems thorough enough
     }
 }
