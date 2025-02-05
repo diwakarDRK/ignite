@@ -21,8 +21,5 @@ class BookingControllerTest {
     @DisplayName("When bookClass() is called with correct parameters, then the class should be booked")
     void testBookClass() throws IOException {
         //Similar to the testWorkoutCreateClass() method in ClassControllerTest
-        //Not Writing the code since these tests are not effective and will similar to
-        // previous tests in ClassControllerTest
-
     }
 }
